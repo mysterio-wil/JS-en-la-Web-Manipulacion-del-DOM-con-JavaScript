@@ -11,13 +11,13 @@
 
 🧨 **Conociendo DOM**
 
-- Presentación
-- Preparando el ambiente
-  - Descargue el proyecto inicial [Aquí](https://github.com/nobody-redhawk/JS-en-la-Web-Manipulacion-del-DOM-con-JavaScript.git)
-- Creando tarea en HTML => OK
-- Manipulando el DOM => OK
+  - **Presentación**
+  - **Preparando el ambiente**
+    - Descargue el proyecto inicial [Aquí](https://github.com/nobody-redhawk/JS-en-la-Web-Manipulacion-del-DOM-con-JavaScript.git)
+  - **Creando tarea en HTML** => OK
+  - **Manipulando el DOM** => OK
 
-  - En la consola escribir:
+    En la consola escribir:
 
     `document` <kbd>Enter</kbd>
 
@@ -69,50 +69,67 @@
     'Aprender mas de DOM'
     ```
 
-- Recorriendo el árbol de DOM
+  - **Recorriendo el árbol de DOM**
   
-  Estamos construyendo nuestra aplicación y tenemos la siguiente estructura HTML hasta el momento:
-  ```html
-  <div class="mainCard">
-    <div class="title">
-      <img src="./assets/rocket.svg" />
-    </div>
-    <div>
-      <form action="">
-        <input
-          type="text"
-          name="task"
-          placeholder="Nombre de la tarea"
-          class="inputForm"
-          autocomplete="off"
-        />
-        <button type="submit" class="btnCreate">
-          Agregar <i class="fas fa-plus-circle"></i>
-        </button>
-      </form>
-    </div>
-    <ul class="cardsList">
-      <li class="card">
-        <div>
-          <i class="fas fa-check-square completedIcon icon"></i>
-          <span class="task">Hacer curso de DOM</span>
-          <i class="fas fa-check-squareX"></i>
+    Estamos construyendo nuestra aplicación y tenemos la siguiente estructura HTML hasta el momento:
+    ```html
+    <div class="mainCard">
+        <div class="title">
+        <img src="./assets/rocket.svg" />
         </div>
-        <i class="fas fa-trash-alt trashIcon icon"></i>
-      </li>
-    </ul>
-  </div>
-  ```
-  Cuando el navegador crea una representación de este documento en formato de objetos, queremos acceder al nodo que representa el párrafo y alterar su texto de manera dinámica para `Realizar curso de JavaScript`. ¿Qué código realizará esta tarea?
+        <div>
+        <form action="">
+            <input
+            type="text"
+            name="task"
+            placeholder="Nombre de la tarea"
+            class="inputForm"
+            autocomplete="off"
+            />
+            <button type="submit" class="btnCreate">
+            Agregar <i class="fas fa-plus-circle"></i>
+            </button>
+        </form>
+        </div>
+        <ul class="cardsList">
+        <li class="card">
+            <div>
+            <i class="fas fa-check-square completedIcon icon"></i>
+            <span class="task">Hacer curso de DOM</span>
+            <i class="fas fa-check-squareX"></i>
+            </div>
+            <i class="fas fa-trash-alt trashIcon icon"></i>
+        </li>
+        </ul>
+    </div>
+    ```
+    Cuando el navegador crea una representación de este documento en formato de objetos, queremos acceder al nodo que representa el párrafo y alterar su texto de manera dinámica para `Realizar curso de JavaScript`. ¿Qué código realizará esta tarea?
 
-  Respuesta:
-  ```js
-  document.querySelector('span').textContent = 'Realizar curso de JavaScript'
-  ```
-- ¿Cómo funciona el DOM?
+    Respuesta:
+    ```js
+    document.querySelector('span').textContent = 'Realizar curso de JavaScript'
+    ```
+  - **¿Cómo funciona el DOM?**
   
-  ![Arbol de DOM](/assets/arbol-de-dom.png)
+    ![Arbol de DOM](/assets/arbol-de-dom.png)
 
-- Seleccionando elementos
-- Haga lo que hicimos en aula
-- Lo que aprendimos
+  - **Seleccionando elementos**
+
+    Utilizamos el método `querySelector` para recorrer el árbol del DOM y encontrar el elemento que queremos, utilizando JavaScript. Pero, existen otro métodos que pueden ser utilizados con la misma finalidad.
+
+    - `document.getElementById(‘id’)` selecciona el elemento por el `id`
+    - `document.getElementsByClassName(‘clase’)` retorna un arreglo de los elementos por el nombre de la `clase`
+    - `document.getElementsByTagName(‘tag’)` retorna un arreglo de los elementos por el nombre del `tag`
+    - `document.querySelectorAll(“selector”)` regresa todos los elementos con el mismo nombre
+  
+  - **Haga lo que hicimos en aula**
+    
+    La práctica ayuda mucho en el aprendizaje. 
+
+  - **Lo que aprendimos**
+    
+    Lo que aprendimos en esta aula:
+
+    - Recorrer el árbol del DOM
+    - Utilizar `querySelector` para seleccionar los elementos dentro del árbol del DOM
+    - Funcionamiento de la estructura del DOM
