@@ -9,7 +9,7 @@
 
 ## Aulas
 
-🧨 **Conociendo DOM**
+🧨 *Conociendo DOM*
 
   - **Presentación**
   - **Preparando el ambiente**
@@ -133,3 +133,17 @@
     - Recorrer el árbol del DOM
     - Utilizar `querySelector` para seleccionar los elementos dentro del árbol del DOM
     - Funcionamiento de la estructura del DOM
+
+🧨 *Comportamiento del formulario*
+
+  - **Proyecto del aula anterior**
+    Descargar [aquí](https://github.com/alura-es-cursos/1821-manipulando-dom-con-js/tree/clase01)
+  - **Escuchando eventos**
+  - **Capturando el valor del input**
+  - **Escuchando eventos click**
+  - **Comportamiento del formulario**
+  - **Haga lo que hicimos en aula**
+  - **Lo que aprendimos**
+
+
+
