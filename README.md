@@ -110,6 +110,9 @@
   document.querySelector('span').textContent = 'Realizar curso de JavaScript'
   ```
 - ¿Cómo funciona el DOM?
+  
+  ![Arbol de DOM](/assets/arbol-de-dom.png)
+
 - Seleccionando elementos
 - Haga lo que hicimos en aula
 - Lo que aprendimos
