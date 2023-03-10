@@ -138,7 +138,31 @@
 
   - **Proyecto del aula anterior**
     Descargar [aquí](https://github.com/alura-es-cursos/1821-manipulando-dom-con-js/tree/clase01)
-  - **Escuchando eventos**
+  - **Escuchando eventos** => OK
+
+    En el archivo `index.html` en la linea 33 se agregó `data-form-btn`
+
+    El `data-*` atributo se usa para almacenar datos personalizados privados para la página o la aplicación.
+
+    El `data-*` atributo nos brinda la capacidad de incrustar atributos de datos personalizados en todos los elementos HTML.
+
+    ```html
+    <button type="submit" class="btnCreate" data-form-btn>
+    ```
+    
+    En el archivo script.js se agregó estás lineas de código
+
+    ```js
+    const btn = document.querySelector("[data-form-btn]");
+    console.log(btn);
+    //listener
+    btn.addEventListener("click", function() {
+    console.log("crear tarea")
+
+    })
+
+    ```
+
   - **Capturando el valor del input**
   - **Escuchando eventos click**
   - **Comportamiento del formulario**
