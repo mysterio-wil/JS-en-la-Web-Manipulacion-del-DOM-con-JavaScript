@@ -158,16 +158,60 @@
     //listener
     btn.addEventListener("click", function() {
     console.log("crear tarea")
-
     })
-
+    ```
+  - **Capturando el valor del input**
+    En el archivo `index.html` en la linea del input se agregó `data-form-input`
+    ```html
+    <input type="text" name="task" placeholder="Nombre de la tarea" class="inputForm" autocomplete="off" data-form-input/>
+    ```
+    El `data-*` atributo se usa para almacenar datos personalizados privados para la página o la aplicación.
+    El `data-*` atributo nos brinda la capacidad de incrustar atributos de datos personalizados en todos los elementos HTML.
+    
+    En el archivo script.js se agregó estas lineas de codigo.
+    ```js
+    const btn = document.querySelector("[data-form-btn]");
+    console.log(btn);
+    //listener
+    btn.addEventListener("click", function() {
+    /* console.log("crear tarea") */
+        const input = document.querySelector("[data-form-input]");
+        console.log(input.value);
+    })
     ```
 
-  - **Capturando el valor del input**
   - **Escuchando eventos click**
+    ¿Cuáles son las tres cosas que necesitamos para utilizar un escuchador de eventos?
+    
+    Rpta: `Evento / Elemento que recibirá el evento / Lo que pasará cuando el evento sea realizado.`
+  
   - **Comportamiento del formulario**
+  
+    Se hizo cambios en el archivo `script.js`
+    ```js
+    const btn = document.querySelector("[data-form-btn]");
+    //listener
+    //Arrow functions o funciones anonimas
+    /* btn.addEventListener("click", function(evento) { */
+    const createTask = (evento) => {
+    /* console.log("crear tarea") */
+    evento.preventDefault(); /* prevenir que la página se recargue */
+    const input = document.querySelector("[data-form-input]");
+    console.log(input.value);
+    };
+    console.log(btn);
+    btn.addEventListener("click", createTask);
+    ```
+
   - **Haga lo que hicimos en aula**
+
+    *La práctica ayuda mucho en el aprendizaje.*
+
   - **Lo que aprendimos**
+
+    Utilizar data-attributes
+    - Utilizar el método `addEventListener` para escuchar eventos de un elemento
+    - Prevenir el comportamiento patrón del formulario
 
 
 
