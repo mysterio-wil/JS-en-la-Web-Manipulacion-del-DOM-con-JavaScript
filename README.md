@@ -213,5 +213,73 @@
     - Utilizar el método `addEventListener` para escuchar eventos de un elemento
     - Prevenir el comportamiento patrón del formulario
 
+🧨 *Agregar una tarea a la lista*
+
+ - **Proyecto del aula anterior**
+   Descargar [aquí](https://github.com/alura-es-cursos/1821-manipulando-dom-con-js/tree/clase02)
+ - **Agregando tarea**
+
+   En el archivo `index.html` se agregó `data-task` en la linea:
+
+   ```html
+   <li class="card" data-task>
+   ```
+    En el archivo `index.html` se eliminó las lineas para agregarlo en el archivo `script.js`
+ 
+    ```html
+    <div>
+        <i class="far fa-check-square icon"></i>
+        <span class="task">Hacer curso de DOM</span>
+    </div>
+    <i class="fas fa-trash-alt trashIcon icon"></i>
+    ```
+    En el archivo `script.js` se agregó las lineas correspondientes
+
+    ```js
+    const btn = document.querySelector("[data-form-btn]");
+
+    //listener
+    //Arrow functions o funciones anonimas
+    /* btn.addEventListener("click", function(evento) { */
+    const createTask = (evento) => {
+    /* console.log("crear tarea") */
+    evento.preventDefault(); /* prevenir que la página se recargue */
+    const input = document.querySelector("[data-form-input]");
+    ```
+    
+    Código agregado en esta seccion:
+
+    ```js
+    const value = input.value;
+    const task = document.querySelector("[data-task]");
+    input.value = "";
+    //backticks
+    const content = `<div>
+                        <i class="far fa-check-square icon"></i>
+                        <span class="task">${value}</span> 
+                    </div>
+                    <i class="fas fa-trash-alt trashIcon icon"></i>`
+    // value: almacena la informacion que ingresa el usuario 
+    /* console.log(value); */
+    /* console.log(task); */
+    task.innerHTML = content;
+    console.log(content);
+    ```
+
+    ```js
+    };
+    console.log(btn);
+
+    btn.addEventListener("click", createTask);
+    ```
+
+
+
+ - **Creando un elemento**
+ - **Creando template**
+ - **Nodos de DOM**
+ - **Haga lo que hicimos en aula**
+ - **Lo que aprendimos**
+
 
 
