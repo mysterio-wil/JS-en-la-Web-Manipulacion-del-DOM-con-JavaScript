@@ -246,7 +246,7 @@
     evento.preventDefault(); /* prevenir que la página se recargue */
     const input = document.querySelector("[data-form-input]");
     ```
-    
+
     Código agregado en esta seccion:
 
     ```js
@@ -273,13 +273,97 @@
     btn.addEventListener("click", createTask);
     ```
 
-
-
  - **Creando un elemento**
+   
+   En el archivo `index.html` se agregó `data-list` en la linea:
+
+   ```html
+   <ul class="cardsList" data-list>
+   ```
+   En el archivo `index.html` se eliminó las lineas:
+ 
+   ```html
+    <li class="card" data-task></li>
+    <li class="card">
+        <div>
+            <i class="far fa-check-square icon"></i>
+            <span class="task">Hacer curso de Git</span>
+        </div>
+        <i class="fas fa-trash-alt trashIcon icon"></i>
+    </li>
+    ```
+    Codigo agregado al archivo `script`
+
+    ```js
+    const btn = document.querySelector("[data-form-btn]");
+    //listener
+    //Arrow functions o funciones anonimas
+    //btn.addEventListener("click", function(evento) { 
+    const createTask = (evento) => {
+        /* console.log("crear tarea") */
+        evento.preventDefault(); /* prevenir que la página se recargue */
+        const input = document.querySelector("[data-form-input]");
+        const value = input.value;
+    ```
+    *Código agregado en esta sección*
+    ```js
+        const list = document.querySelector("[data-list]");
+        /* const task = document.querySelector("[data-task]"); */
+        const task = document.createElement("li");
+        task.classList.add("card");
+    ```
+    ```js
+        input.value = "";
+        //backticks
+        const content = `<div>
+                            <i class="far fa-check-square icon"></i>
+                            <span class="task">${value}</span> 
+                        </div>
+                        <i class="fas fa-trash-alt trashIcon icon"></i>`
+        // value: almacena la informacion que ingresa el usuario 
+        /* console.log(value); */
+        /* console.log(task); */
+        task.innerHTML = content;
+    ```
+    *Código agregado en esta sección*
+    ```js
+        list.appendChild(task);
+    ```
+
+    ```js
+        console.log(content);
+    };
+    console.log(btn);
+     btn.addEventListener("click", createTask);
+     ```
+
  - **Creando template**
+
+    Necesitamos crear un template de un párrafo que reciba el contenido `HTML` y `JavaScript`, ¿cuál sintaxis resuelve nuestro problema?
+
+    Rpta: `<p>${ }</p>` Además de utilizar los backticks, necesitamos utilizar la expresión `${ }` la cual recibirá el código `JavaScript`.
+
  - **Nodos de DOM**
+
+    Todos los elementos en nuestro árbol de DOM son nodos y todos los nodos pueden ser accedidos vía JavaScript. Los nodos pueden ser eliminados, creados o modificados. Durante el curso utilizamos el método `appendChild` que siempre es implementado al final del nodo, para colocar un nodo hijo dentro del nodo padre.
+
+    Existen otros métodos que podemos utilizar para manipular nodos:
+
+    - insertBefore(padre, hijo): Coloca un nodo antes del otro
+    - replaceChild(elemento1, elemento2): Sustituye el nodo del elemento 1 por el nodo del elemento 2
+    - removeChild(elemento): Remueve un nodo del árbol
+
  - **Haga lo que hicimos en aula**
+    
+    *La práctica ayuda mucho en el aprendizaje.*
+
  - **Lo que aprendimos**
+
+    Lo que aprendimos en esta aula:
+
+    - Utilizar *template strings*
+    - Colocar un elemento hijo dentro del elemento padre utilizando el método *appendChild*
+    - Crear elementos utilizando el método *createElement*
 
 
 

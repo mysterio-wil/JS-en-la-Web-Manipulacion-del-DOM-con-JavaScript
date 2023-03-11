@@ -8,7 +8,10 @@ const createTask = (evento) => {
     evento.preventDefault(); /* prevenir que la página se recargue */
     const input = document.querySelector("[data-form-input]");
     const value = input.value;
-    const task = document.querySelector("[data-task]");
+    const list = document.querySelector("[data-list]");
+    /* const task = document.querySelector("[data-task]"); */
+    const task = document.createElement("li");
+    task.classList.add("card");
     input.value = "";
     //backticks
     const content = `<div>
@@ -20,6 +23,9 @@ const createTask = (evento) => {
     /* console.log(value); */
     /* console.log(task); */
     task.innerHTML = content;
+    
+    list.appendChild(task);
+
     console.log(content);
 };
 console.log(btn);
