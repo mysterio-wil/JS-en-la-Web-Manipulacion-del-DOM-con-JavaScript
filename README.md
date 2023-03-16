@@ -599,3 +599,12 @@
     - Utilizar IIFE
 
 
+🧨 *Eliminar una tarea*
+  - **Proyecto del aula anterior**
+  - **Eliminando una tarea**
+  - **Creando módulos**
+  - **Encapsulando código**
+  - **Haga lo que hicimos en aula**
+  - **Proyecto final**
+  - **Lo que aprendimos**
+  - **Conclusión**
