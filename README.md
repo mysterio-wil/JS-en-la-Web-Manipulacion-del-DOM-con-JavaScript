@@ -591,4 +591,11 @@
   - **Haga lo que hicimos en aula**
   - **Lo que aprendimos**
 
+  Lo que aprendimos en esta aula:
+
+    - Agregar la clase CSS utilizando el método toggle
+    - Utilizar el atributo parentElement para subir un elemento en el árbol del - DOM
+    - Encontrar el objetivo del evento utilizando la propiedad target
+    - Utilizar IIFE
+
 
