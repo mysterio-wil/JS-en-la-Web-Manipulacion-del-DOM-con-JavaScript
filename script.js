@@ -1,3 +1,7 @@
+//? se agregó en el aula 04 javascript IIFE
+( () => {
+
+
 const btn = document.querySelector("[data-form-btn]");
 
 //listener
@@ -56,7 +60,9 @@ const checkComplete = () => {
     return i;
 };
 
-    //? se agregó en el aula04 'concluir la tarea'
+//? se agregó en el aula04 'concluir la tarea'
+
+//!Inmediately invoked function expression IIFE
 const completeTask = (event) => {
     /* console.log(event.target); */
     const element = event.target;
@@ -65,4 +71,5 @@ const completeTask = (event) => {
     element.classList.toggle("far");
 }
 
+})();
 
