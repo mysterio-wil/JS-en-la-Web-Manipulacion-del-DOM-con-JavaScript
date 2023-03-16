@@ -607,4 +607,10 @@
   - **Haga lo que hicimos en aula**
   - **Proyecto final**
   - **Lo que aprendimos**
+
+  Lo que aprendimos en esta aula:
+
+    - Utilizar import/export
+    - Remover elementos del DOM con el método remove
+  
   - **Conclusión**
