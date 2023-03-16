@@ -365,5 +365,82 @@
     - Colocar un elemento hijo dentro del elemento padre utilizando el método *appendChild*
     - Crear elementos utilizando el método *createElement*
 
+🧨 *Concluir una tarea*
+
+  - **Proyecto del aula anterior**
+
+    Descargar [aquí](https://github.com/alura-es-cursos/1821-manipulando-dom-con-js/tree/clase03)
+
+  - **Creando el botón concluir**
+
+  Se agregaron estos cambios en el archivo `script.js`
+
+
+
+  ```js
+  const btn = document.querySelector("[data-form-btn]");
+
+  //listener
+  //Arrow functions o funciones anonimas
+  /* btn.addEventListener("click", function(evento) { */
+  const createTask = (evento) => {
+      /* console.log("crear tarea") */
+      evento.preventDefault(); /* prevenir que la página se recargue */
+      const input = document.querySelector("[data-form-input]");
+      const value = input.value;
+      const list = document.querySelector("[data-list]");
+      /* const task = document.querySelector("[data-task]"); */
+      const task = document.createElement("li");
+      task.classList.add("card");
+      input.value = "";
+      //?Agregado en el aula 04 'creando boton concluir'
+      //*backticks
+      console.log(checkComplete());
+      const taskContent = document.createElement('div');
+      
+      const titleTask = document.createElement("span");
+      titleTask.classList.add("task");
+      titleTask.innerText = value;
+      taskContent.appendChild(checkComplete());
+      taskContent.appendChild(titleTask);
+
+
+      const content = `
+                          /* <i class="far fa-check-square icon"></i> */
+                          
+                          /* <span class="task">${value}</span>  */
+                      
+                      <i class="fas fa-trash-alt trashIcon icon"></i>`
+      // value: almacena la informacion que ingresa el usuario 
+      /* console.log(value); */
+      /* console.log(task); */
+      //?Agregado en el aula 04 'creando boton concluir'
+      //! task.innerHTML = content;
+      
+      task.appendChild(taskContent);
+      list.appendChild(task);
+
+      console.log(content);
+  };
+  console.log(btn);
+  //?Agregado en el aula 04 'creando boton concluir'
+  //* Arrow functions o funciones anónimas
+  btn.addEventListener("click", createTask);
+  //?Agregado en el aula 04 'creando boton concluir'
+  const checkComplete = () => {
+      const i = document.createElement("i");
+      i.classList.add("far");
+      i.classList.add("fa-check-square");
+      i.classList.add("icon");
+
+      return i;
+  };
+  ```
+  
+  - **Concluir la tarea**
+  - **Seleccionando elemento padre**
+  - **Javascrip IIFE**
+  - **Haga lo que hicimos en aula**
+  - **Lo que aprendimos**
 
 

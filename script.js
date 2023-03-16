@@ -13,23 +13,47 @@ const createTask = (evento) => {
     const task = document.createElement("li");
     task.classList.add("card");
     input.value = "";
-    //backticks
-    const content = `<div>
-                        <i class="far fa-check-square icon"></i>
-                        <span class="task">${value}</span> 
-                    </div>
+    //?Agregado en el aula 04 'creando boton concluir'
+    //*backticks
+    console.log(checkComplete());
+    const taskContent = document.createElement('div');
+    
+    const titleTask = document.createElement("span");
+    titleTask.classList.add("task");
+    titleTask.innerText = value;
+    taskContent.appendChild(checkComplete());
+    taskContent.appendChild(titleTask);
+
+
+    const content = `
+                        /* <i class="far fa-check-square icon"></i> */
+                        
+                        /* <span class="task">${value}</span>  */
+                    
                     <i class="fas fa-trash-alt trashIcon icon"></i>`
     // value: almacena la informacion que ingresa el usuario 
     /* console.log(value); */
     /* console.log(task); */
-    task.innerHTML = content;
-    
+    //?Agregado en el aula 04 'creando boton concluir'
+    //! task.innerHTML = content;
+     
+    task.appendChild(taskContent);
     list.appendChild(task);
 
     console.log(content);
 };
 console.log(btn);
-
+//?Agregado en el aula 04 'creando boton concluir'
+//* Arrow functions o funciones anónimas
 btn.addEventListener("click", createTask);
+//?Agregado en el aula 04 'creando boton concluir'
+const checkComplete = () => {
+    const i = document.createElement("i");
+    i.classList.add("far");
+    i.classList.add("fa-check-square");
+    i.classList.add("icon");
+
+    return i;
+};
 
 
